@@ -1,0 +1,2 @@
+gom 'github.com/BurntSushi/toml'
+gom 'github.com/codegangsta/cli'
