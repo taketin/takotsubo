@@ -11,6 +11,8 @@ var ApiVersion string // ex. "/api/v3"
 var Token string
 var Host string
 
+var exit = os.Exit
+
 type Member struct {
 	Login string
 }
@@ -76,11 +78,15 @@ func Members(teamId string) []string {
 	return members
 }
 
-func prepare() {
+func prepare() bool {
+	succeeded := true
 	if Token == ""  || Host == "" || ApiVersion == "" {
 		println("Please settings for 'Token', 'Host' and 'ApiVersion'")
-		os.Exit(1)
+		succeeded = false
+		exit(1)
 	}
+
+	return succeeded
 }
 
 func performRequest(req *http.Request) []uint8 {
