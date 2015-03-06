@@ -1,4 +1,4 @@
-takotsubo
+takotsubo [![Build Status](https://travis-ci.org/taketin/takotsubo.svg)](https://travis-ci.org/taketin/takotsubo)
 ====
 
 ## Description
