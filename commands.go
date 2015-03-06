@@ -35,7 +35,7 @@ var commandAdd = cli.Command{
 }
 
 var commandMembers = cli.Command{
-	Name: "members",
+	Name:  "members",
 	Usage: "members {team_id}",
 	Description: `
 	Show team members.
